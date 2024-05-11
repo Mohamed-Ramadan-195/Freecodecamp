@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <test verbose="2" preserve-order="true" name="Freecodecamp Testing">
+        <classes>
+            <class name="tests.EnglishCourseTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.MenuTest"/>
+            <class name="tests.AboutTest"/>
+        </classes>
+    </test>
+</suite>
