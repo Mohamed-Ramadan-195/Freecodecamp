@@ -25,10 +25,10 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @AfterClass
-    public void closeUrl() {
-        driver.quit();
-    }
+  //  @AfterClass
+//    public void closeUrl() {
+//        driver.quit();
+//    }
 
     @AfterMethod
     public void takeScreenShot(ITestResult iTestResult) throws IOException {
