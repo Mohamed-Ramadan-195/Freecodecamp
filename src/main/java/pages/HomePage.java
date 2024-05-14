@@ -1,12 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -34,6 +33,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"gatsby-focus-wrapper\"]/div/footer/div[1]/div[2]/ul/li[12]/a")
     public WebElement guide;
 
+    @FindBy(xpath = "//*[@id=\"ais-SearchBox-input\"]")
+    public WebElement  search;
+
     public void openSignInAndGetStarted() {
         signInButton.click();
         // getStartedButton.click();
@@ -56,5 +58,13 @@ public class HomePage extends BasePage {
 
     public void openGuide() {
         guide.click();
+    }
+    public void clickSearch() {
+        search.click();
+    }
+    public void enterSearchText(String searchText) {
+        search.clear();
+        search.sendKeys(searchText);
+        search.sendKeys(Keys.RETURN);
     }
 }
