@@ -10,11 +10,14 @@ public class SearchTest extends BaseTest {
     SearchPage searchPage;
 
     @Test
-    public void TestSearch() {
+    public void TestSearch() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.clickSearch();
+
         homePage.enterSearchText("java");
+        Thread.sleep(3000);
+
         searchPage = new SearchPage(driver);
-        //Assert.assertTrue(searchPage.searchResult.getText().contains("#JAVA"));
+        // Assert.assertTrue(searchPage.searchResult.getText().contains("#JAVA"));
     }
 }

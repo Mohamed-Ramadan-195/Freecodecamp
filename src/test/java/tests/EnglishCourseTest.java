@@ -17,14 +17,25 @@ public class EnglishCourseTest extends BaseTest {
         executor = (JavascriptExecutor) driver;
         executor.executeScript("scrollBy(0,4000)");
         homePage.selectEnglishCourse();
-        englishCoursePage = new EnglishCoursePage(driver);
-        // Assert.assertEquals(driver.getTitle(), "A2 English for Developers (Beta)");
     }
 
     @Test(priority = 2)
-    public void testDonate() {
-        homePage = new HomePage(driver);
+    public void testOpenVideo() {
+        englishCoursePage = new EnglishCoursePage(driver);
+        executor = (JavascriptExecutor) driver;
         executor.executeScript("scrollBy(0,4000)");
-        englishCoursePage.donateNowClick();
+
+        englishCoursePage.openVideo();
+
+        Assert.assertEquals(englishCoursePage.courseName.getText(), "A2 English for Developers (Beta)");
+        englishCoursePage.setPlayVideo();
+    }
+
+    @Test(priority = 3)
+    public void testAnswerQuestion() {
+        englishCoursePage.input1.sendKeys("drawing");
+        englishCoursePage.input2.sendKeys("tablet");
+
+        englishCoursePage.setCheckAnswerButton();
     }
 }

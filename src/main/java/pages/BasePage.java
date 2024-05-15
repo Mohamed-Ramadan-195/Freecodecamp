@@ -13,5 +13,6 @@ public class BasePage {
     WebDriverWait wait;
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver,this);
+        action = new Actions(driver);
     }
 }

@@ -3,10 +3,15 @@
 <suite name="All Tests">
     <test verbose="2" preserve-order="true" name="Freecodecamp Testing">
         <classes>
-            <class name="tests.EnglishCourseTest"/>
+            <class name="tests.CreateAccountTest"/>
             <class name="tests.LoginTest"/>
-            <class name="tests.MenuTest"/>
-            <class name="tests.AboutTest"/>
+            <class name="tests.SearchTest"/>
+            <class name="tests.EnglishCourseTest"/>
+            <class name="tests.ShopTest"/>
+            <class name="tests.DonateTest"/>
+            <class name="tests.LanguageTest"/>
+            <class name="tests.ShopTest"/>
+            <class name="tests.GuideTest"/>
         </classes>
     </test>
 </suite>

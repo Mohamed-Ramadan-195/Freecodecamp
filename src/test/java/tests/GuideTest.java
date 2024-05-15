@@ -10,5 +10,7 @@ public class GuideTest extends BaseTest {
     public void guideSubject() {
         homePage = new HomePage(driver);
         homePage.openGuide();
+        driver.navigate().to("https://www.freecodecamp.org/news/");
+        driver.navigate().back();
     }
 }
